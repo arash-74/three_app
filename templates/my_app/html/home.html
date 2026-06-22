@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'my_app/css/home.css' %}">
+    <title>آرش تیونینگ</title>
+</head>
+<body>
+<div class="preloader">
+    <svg class="loader">
+        <circle class="circle" cx="50%" cy="50%" r="35" stroke-width="3"></circle>
+    </svg>
+</div>
+<canvas id="canvas"></canvas>
+<section class="section-1">
+    <div class="logo-container">
+        <img src="{% static 'my_app/media/logo.png' %}" alt="logo">
+    </div>
+    <div class="description">
+        <h1 class="title"><span>آرش</span> تیونینگ</h1>
+        <p>در آرش تیونینگ هر خودرو فراتر از یک وسیله نقلیه است؛
+            ترکیبی از عملکرد، زیبایی و هویتی منحصربه‌فرد.</p>
+    </div>
+</section>
+<section class="section-2">
+    <div class="container">
+        <p>آرش تیونینگ جایی است که علاقه به خودرو با دقت فنی و خلاقیت ترکیب می‌شود. ما با ارائه خدمات تخصصی در زمینه تیونینگ، بهینه‌سازی ظاهر و عملکرد خودرو، نصب قطعات اسپرت و شخصی‌سازی حرفه‌ای، تلاش می‌کنیم هر خودرو را به نسخه‌ای منحصربه‌فرد تبدیل کنیم. هدف ما ایجاد تجربه‌ای متفاوت برای افرادی است که به جزئیات اهمیت می‌دهند و می‌خواهند خودرویی متمایز، قدرتمند و هماهنگ با سلیقه شخصی خود داشته باشند.</p>
+        <p>هر خودرو یک پروژه منحصربه‌فرد است. ما با استفاده از قطعات باکیفیت، دانش فنی به‌روز و توجه به جزئیات، تلاش می‌کنیم تعادلی ایده‌آل میان زیبایی، عملکرد و دوام ایجاد کنیم. از تغییرات ظاهری گرفته تا ارتقای فنی، تمامی مراحل با هدف ارائه نتیجه‌ای حرفه‌ای و فراتر از انتظار مشتری انجام می‌شود.</p>
+        <p>ما معتقدیم تیونینگ تنها تغییر ظاهر خودرو نیست، بلکه راهی برای نمایش شخصیت و سلیقه مالک آن است. به همین دلیل در هر پروژه، نیازها و خواسته‌های مشتری در اولویت قرار می‌گیرد تا خروجی نهایی نه‌تنها چشم‌نواز و مدرن باشد، بلکه تجربه رانندگی لذت‌بخش‌تر و احساسی متفاوت از مالکیت خودرو را نیز به همراه داشته باشد.</p>
+    </div>
+</section>
+<section class="section-3">
+    <div class="container"><h3>تماس با ما</h3></div>
+</section>
+<script>
+    history.scrollRestoration = "manual";
+</script>
+<script type="importmap">
+    {
+    "imports": {
+    "three": "{% static 'three/build/three.module.js' %}",
+    "three/addons/":"{% static 'three/examples/jsm' %}/",
+    "lil-gui":"{% static 'lil-gui/dist/lil-gui.esm.js' %}",
+    "gsap":"{% static 'gsap/index.js' %}",
+    "gsap/ScrollTrigger":"{% static 'gsap/ScrollTrigger.js' %}"
+        }
+    }
+</script>
+<script defer>
+    const environPath = "{% static 'my_app/environ/autoshop_01_4k.hdr'%}"
+    const modelPath = "{% static 'my_app/model/scene.gltf' %}"
+</script>
+<script src="{% static 'my_app/js/home_three.js' %}" defer type="module"></script>
+<script src="{% static 'my_app/js/home_animation.js' %}" defer type="module"></script>
+</body>
+</html>

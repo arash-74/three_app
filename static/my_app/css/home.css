@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Arabic:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playpen Sans Arabic';
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: rgb(169 169 169 / 0.9);
+    backdrop-filter: blur(35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader circle {
+    stroke-width: 10px;
+    stroke: #d10100;
+    fill: transparent;
+    stroke-dasharray: 90 50;
+    stroke-linecap: round;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    display: block;
+    position: fixed;
+}
+
+.section-1 {
+    position: relative;
+    z-index: 99;
+    /*background: transparent;*/
+    width: 35%;
+    min-height: 100vh;
+    left: 0;
+    right: 65%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.section-1 .logo-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: transparent;
+    }
+}
+
+.section-1 .description {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-1 .description h1 {
+    font-size: 3rem;
+
+    & span {
+        color: #d10100;
+    }
+}
+
+.section-2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 99;
+}
+
+.section-2 .container {
+    position: fixed;
+    top: 50%;
+    background: black;
+    width: 60%;
+    height: 85%;
+    transform: translate(110%, -50%);
+    box-shadow: -15px 12px 2px #d10100;
+    color: white;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.section-2 .container p {
+    opacity: 0;
+}
+.section-3{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.section-3 .container {
+    width: 100%;
+    height: 200px;
+    background: black;
+    position: relative;
+    align-self: flex-end;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
