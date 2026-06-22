@@ -1,10 +1,12 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from "three/addons/loaders/GLTFLoader.js";
-import {HDRLoader} from "three/addons/loaders/HDRLoader.js";
+import {RGBELoader} from "three/addons/loaders/RGBELoader.js";
 import {GUI} from 'lil-gui'
 import * as gsap from './home_animation.js'
 import {section3Animate} from "./home_animation.js";
+
+console.log(THREE)
 // define elements
 const canvas = document.getElementById('canvas');
 let size = {
@@ -32,7 +34,7 @@ camera.rotation.set(-0.254, -0.11, 0)
 let cameraHelper = new OrbitControls(camera, canvas);
 cameraHelper.enabled = false
 //define env
-const envLoader = new HDRLoader();
+const envLoader = new RGBELoader();
 envLoader.load(environPath, envMap => {
     envMap.mapping = THREE.EquirectangularReflectionMapping
     scene.environment = envMap;
